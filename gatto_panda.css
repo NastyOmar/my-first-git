@@ -1,0 +1,126 @@
+/* Rotazioni pazze */
+body {
+  font-family: "Comic Sans MS", cursive;
+  margin: 20px;
+  transform: rotate(0.5deg);
+}
+
+h1 {
+  transform: rotate(-2deg) scale(1.1);
+  letter-spacing: 15px;
+  text-transform: lowercase;
+}
+
+h1::before {
+  content: "🎪 ";
+}
+
+h1::after {
+  content: " 🎪";
+}
+
+h2 {
+  transform: skew(-5deg);
+  letter-spacing: 8px;
+}
+
+h2::before {
+  content: "🐱 🐼 ";
+}
+
+h3 {
+  transform: rotate(1deg);
+  font-size: 40px;
+}
+
+h3::after {
+  content: " ⁉️⁉️⁉️";
+}
+
+/* Immagini caotiche */
+img {
+  transform: rotate(-3deg) scale(0.9);
+  border: 10px dashed;
+  border-radius: 50% 20% 50% 20%;
+}
+
+img:hover {
+  transform: rotate(180deg) scale(1.5);
+  transition: transform 0.3s;
+}
+
+figure {
+  transform: skew(2deg);
+  margin: 40px;
+}
+
+figcaption::before {
+  content: "👉 ";
+  font-size: 30px;
+}
+
+figcaption::after {
+  content: " 👈";
+  font-size: 30px;
+}
+
+figcaption p {
+  letter-spacing: 5px;
+  word-spacing: 20px;
+}
+
+/* Liste assurde */
+li {
+  list-style: none;
+  margin: 20px 0;
+  transform: rotate(-0.5deg);
+}
+
+li::before {
+  content: "🔥 💀 🔥 ";
+}
+
+ul li::before {
+  content: "⚠️ ";
+  font-size: 25px;
+}
+
+ul {
+  transform: skew(-3deg);
+}
+
+/* Ultimo elemento pazzo */
+body > li:last-child {
+  transform: rotate(5deg) scale(1.3);
+  position: relative;
+  left: 50px;
+  letter-spacing: 10px;
+}
+
+body > li:last-child::before {
+  content: "🌟 © ";
+}
+
+body > li:last-child::after {
+  content: " 🌟";
+}
+
+/* Effetti extra folli */
+p {
+  word-spacing: 15px;
+  line-height: 2;
+}
+
+/* Tutto vibra leggermente */
+* {
+  animation: vibra 0.1s infinite alternate;
+}
+
+@keyframes vibra {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(1px);
+  }
+}
