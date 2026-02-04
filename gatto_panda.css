@@ -1,126 +1,746 @@
-/* Rotazioni pazze */
+/* COMIC SANS OVUNQUE */
+* {
+  font-family: "Comic Sans MS", cursive, fantasy;
+}
+
+/* TUTTO CENTRATO */
 body {
-  font-family: "Comic Sans MS", cursive;
-  margin: 20px;
-  transform: rotate(0.5deg);
+  text-align: center;
+  margin: 20px auto;
+  overflow-x: hidden;
+  position: relative;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+  background-size: 400% 400%;
+  animation: rainbow-bg 5s infinite;
 }
 
-h1 {
-  transform: rotate(-2deg) scale(1.1);
-  letter-spacing: 15px;
-  text-transform: lowercase;
-}
-
-h1::before {
-  content: "🎪 ";
-}
-
-h1::after {
-  content: " 🎪";
-}
-
-h2 {
-  transform: skew(-5deg);
-  letter-spacing: 8px;
-}
-
-h2::before {
-  content: "🐱 🐼 ";
-}
-
-h3 {
-  transform: rotate(1deg);
-  font-size: 40px;
-}
-
-h3::after {
-  content: " ⁉️⁉️⁉️";
-}
-
-/* Immagini caotiche */
-img {
-  transform: rotate(-3deg) scale(0.9);
-  border: 10px dashed;
-  border-radius: 50% 20% 50% 20%;
-}
-
-img:hover {
-  transform: rotate(180deg) scale(1.5);
-  transition: transform 0.3s;
+h1,
+h2,
+h3,
+p,
+li,
+figcaption {
+  text-align: center;
 }
 
 figure {
-  transform: skew(2deg);
-  margin: 40px;
+  display: inline-block;
+  text-align: center;
 }
 
-figcaption::before {
-  content: "👉 ";
-  font-size: 30px;
+img {
+  display: block;
+  margin: 0 auto;
 }
 
-figcaption::after {
-  content: " 👈";
-  font-size: 30px;
+/* COLORI PAZZI */
+h1 {
+  color: #ff0080;
+  text-shadow:
+    3px 3px #00ff00,
+    6px 6px #0080ff,
+    9px 9px #ff00ff;
+  transform: rotate(-5deg) scale(1.2);
+  position: relative;
+  animation:
+    rainbow-text 2s infinite,
+    shake 0.5s infinite;
 }
 
-figcaption p {
-  letter-spacing: 5px;
-  word-spacing: 20px;
+h2 {
+  color: #00ff00;
+  text-shadow:
+    2px 2px #ff00ff,
+    4px 4px #ffff00;
+  animation:
+    wiggle 0.3s infinite,
+    color-change 3s infinite;
 }
 
-/* Liste assurde */
+h3 {
+  color: #0080ff;
+  text-shadow:
+    3px 3px #ff0000,
+    6px 6px #00ff00;
+  animation: pulse-color 1s infinite;
+}
+
+p {
+  color: #ff00ff;
+  animation: text-wave 2s infinite;
+}
+
 li {
+  color: #ffff00;
+  text-shadow: 1px 1px #ff0000;
   list-style: none;
-  margin: 20px 0;
-  transform: rotate(-0.5deg);
+}
+
+figcaption {
+  color: #00ffff;
+  text-shadow: 2px 2px #ff00ff;
+}
+
+/* RAZZI COLORATI OVUNQUE */
+h1::before {
+  content: "🚀";
+  font-size: 80px;
+  position: absolute;
+  animation: razzo-left 2s infinite;
+  filter: hue-rotate(0deg);
+  animation:
+    razzo-left 2s infinite,
+    rainbow-filter 2s infinite;
+}
+
+h1::after {
+  content: "🚀";
+  font-size: 80px;
+  position: absolute;
+  animation:
+    razzo-right 2s infinite,
+    rainbow-filter 3s infinite;
+}
+
+h2::before {
+  content: "🚀💥🚀";
+  font-size: 50px;
+  display: inline-block;
+  animation:
+    spin 1s infinite linear,
+    rainbow-filter 2s infinite;
+}
+
+h2::after {
+  content: "🔥🚀💨";
+  font-size: 40px;
+  display: inline-block;
+  animation:
+    bounce 0.5s infinite,
+    rainbow-filter 2.5s infinite;
+}
+
+h3::before {
+  content: "🚀🚀🚀";
+  position: absolute;
+  font-size: 60px;
+  animation:
+    fly-diagonal 3s infinite,
+    rainbow-filter 1.5s infinite;
+}
+
+h3::after {
+  content: "💥💥💥💥";
+  font-size: 50px;
+  animation:
+    explode 1s infinite,
+    rainbow-filter 2s infinite;
+}
+
+/* RANE CHE SALTANO OVUNQUE 🐸🐸🐸 */
+body::before {
+  content: "🐸";
+  font-size: 150px;
+  position: fixed;
+  top: 0;
+  left: 10%;
+  animation:
+    rana-salta-1 3s infinite,
+    rainbow-filter 2s infinite;
+  z-index: 1000;
+}
+
+body::after {
+  content: "🐸";
+  font-size: 120px;
+  position: fixed;
+  bottom: 0;
+  right: 10%;
+  animation:
+    rana-salta-2 2.5s infinite,
+    rainbow-filter 1.8s infinite;
+  z-index: 1000;
+}
+
+h1::after::after {
+  content: "🐸🐸";
+}
+
+/* PIÙ RANE */
+figure::before {
+  content: "🐸🐸🐸";
+  font-size: 70px;
+  position: absolute;
+  left: -100px;
+  animation:
+    rana-circle 4s infinite linear,
+    rainbow-filter 2s infinite;
+  z-index: 100;
 }
 
 li::before {
-  content: "🔥 💀 🔥 ";
+  content: "🐸 ";
+  font-size: 30px;
+  animation:
+    rana-bounce 1.2s infinite,
+    rainbow-filter 1.5s infinite;
 }
 
-ul li::before {
-  content: "⚠️ ";
-  font-size: 25px;
+p::before {
+  content: "🐸";
+  font-size: 40px;
+  position: absolute;
+  margin-left: -60px;
+  animation:
+    rana-spin 2.5s infinite linear,
+    rainbow-filter 2s infinite;
 }
 
-ul {
-  transform: skew(-3deg);
+ul::before {
+  content: "🐸";
+  font-size: 100px;
+  position: absolute;
+  left: 50%;
+  animation:
+    rana-mega 5s infinite,
+    rainbow-filter 3s infinite;
 }
 
-/* Ultimo elemento pazzo */
-body > li:last-child {
-  transform: rotate(5deg) scale(1.3);
+/* PANDA VOLANTI 🐼🐼🐼 */
+h2::before {
+  content: "🐼";
+  font-size: 80px;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  animation:
+    panda-vola-1 6s infinite linear,
+    rainbow-filter 2s infinite;
+  z-index: 999;
+}
+
+h3::before {
+  content: "🐼";
+  font-size: 90px;
+  position: fixed;
+  top: 40%;
+  right: 0;
+  animation:
+    panda-vola-2 5s infinite linear,
+    rainbow-filter 2.3s infinite;
+  z-index: 999;
+}
+
+figcaption::before {
+  content: "🐼🐼";
+  font-size: 60px;
+  position: absolute;
+  animation:
+    panda-float 3s infinite,
+    rainbow-filter 1.8s infinite;
+}
+
+figcaption::after {
+  content: "🐼";
+  font-size: 50px;
+  position: absolute;
+  animation:
+    panda-crazy 4s infinite,
+    rainbow-filter 2.5s infinite;
+}
+
+ul li::after {
+  content: " 🐼";
+  font-size: 35px;
+  animation:
+    panda-wiggle 2s infinite,
+    rainbow-filter 2s infinite;
+}
+
+/* PANDA MEGA */
+ul::after {
+  content: "🐼";
+  font-size: 120px;
+  position: fixed;
+  bottom: 20%;
+  left: 50%;
+  animation:
+    panda-mega-fly 7s infinite,
+    rainbow-filter 3s infinite;
+  z-index: 998;
+}
+
+/* Immagini super colorate */
+img {
   position: relative;
-  left: 50px;
-  letter-spacing: 10px;
+  animation:
+    image-chaos 2s infinite,
+    rainbow-border 3s infinite;
+  border: 15px dashed #ff00ff;
+  border-radius: 50% 20% 50% 20%;
+  box-shadow:
+    0 0 50px #00ff00,
+    0 0 100px #ff00ff,
+    0 0 150px #00ffff;
 }
 
-body > li:last-child::before {
-  content: "🌟 © ";
+img:hover {
+  transform: rotate(720deg) scale(2);
+  transition: transform 1s;
 }
 
-body > li:last-child::after {
-  content: " 🌟";
+figure::after {
+  content: "🚀💥🐸🐼";
+  font-size: 80px;
+  position: absolute;
+  right: -100px;
+  animation:
+    tutto-casino 3s infinite,
+    rainbow-filter 2s infinite;
 }
 
-/* Effetti extra folli */
-p {
-  word-spacing: 15px;
-  line-height: 2;
+/* ANIMAZIONI COLORATE */
+@keyframes rainbow-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-/* Tutto vibra leggermente */
-* {
-  animation: vibra 0.1s infinite alternate;
+@keyframes rainbow-text {
+  0% {
+    color: #ff0000;
+  }
+  16% {
+    color: #ff00ff;
+  }
+  33% {
+    color: #0000ff;
+  }
+  50% {
+    color: #00ffff;
+  }
+  66% {
+    color: #00ff00;
+  }
+  83% {
+    color: #ffff00;
+  }
+  100% {
+    color: #ff0000;
+  }
 }
 
-@keyframes vibra {
+@keyframes rainbow-filter {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes rainbow-border {
+  0% {
+    border-color: #ff0000;
+    box-shadow: 0 0 50px #ff0000;
+  }
+  25% {
+    border-color: #00ff00;
+    box-shadow: 0 0 50px #00ff00;
+  }
+  50% {
+    border-color: #0000ff;
+    box-shadow: 0 0 50px #0000ff;
+  }
+  75% {
+    border-color: #ffff00;
+    box-shadow: 0 0 50px #ffff00;
+  }
+  100% {
+    border-color: #ff0000;
+    box-shadow: 0 0 50px #ff0000;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    color: #ff0000;
+  }
+  33% {
+    color: #00ff00;
+  }
+  66% {
+    color: #0000ff;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+
+@keyframes pulse-color {
+  0%,
+  100% {
+    color: #ff00ff;
+    transform: scale(1);
+  }
+  50% {
+    color: #00ffff;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes text-wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+}
+
+/* ANIMAZIONI RANE 🐸 */
+@keyframes rana-salta-1 {
+  0%,
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-300px) scale(1.5) rotate(180deg);
+  }
+  50% {
+    transform: translateY(0) scale(1) rotate(360deg);
+  }
+  75% {
+    transform: translateY(-200px) scale(1.3) rotate(540deg);
+  }
+}
+
+@keyframes rana-salta-2 {
+  0%,
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-400px) scale(2) rotate(720deg);
+  }
+}
+
+@keyframes rana-circle {
   from {
-    transform: translateX(0px);
+    transform: rotate(0deg) translateX(150px) rotate(0deg) scale(1);
   }
   to {
-    transform: translateX(1px);
+    transform: rotate(360deg) translateX(150px) rotate(-360deg) scale(1.5);
+  }
+}
+
+@keyframes rana-bounce {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-30px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(0) rotate(180deg);
+  }
+  75% {
+    transform: translateY(-20px) rotate(270deg);
+  }
+}
+
+@keyframes rana-spin {
+  from {
+    transform: rotate(0deg) translateX(50px) scale(1);
+  }
+  to {
+    transform: rotate(360deg) translateX(50px) scale(1.5);
+  }
+}
+
+@keyframes rana-mega {
+  0% {
+    transform: translate(-200px, -200px) scale(0.5) rotate(0deg);
+  }
+  25% {
+    transform: translate(200px, -100px) scale(2) rotate(180deg);
+  }
+  50% {
+    transform: translate(100px, 200px) scale(1.5) rotate(360deg);
+  }
+  75% {
+    transform: translate(-100px, 100px) scale(1.8) rotate(540deg);
+  }
+  100% {
+    transform: translate(-200px, -200px) scale(0.5) rotate(720deg);
+  }
+}
+
+/* ANIMAZIONI PANDA 🐼 */
+@keyframes panda-vola-1 {
+  0% {
+    transform: translateX(-200px) translateY(0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateX(50vw) translateY(-100px) rotate(360deg) scale(1.5);
+  }
+  100% {
+    transform: translateX(100vw) translateY(0) rotate(720deg) scale(1);
+  }
+}
+
+@keyframes panda-vola-2 {
+  0% {
+    transform: translateX(200px) translateY(0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateX(-50vw) translateY(100px) rotate(-360deg) scale(1.8);
+  }
+  100% {
+    transform: translateX(-100vw) translateY(0) rotate(-720deg) scale(1);
+  }
+}
+
+@keyframes panda-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translateY(-50px) rotate(120deg) scale(1.3);
+  }
+  66% {
+    transform: translateY(50px) rotate(240deg) scale(0.8);
+  }
+}
+
+@keyframes panda-crazy {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translate(100px, -100px) scale(1.5) rotate(90deg);
+  }
+  50% {
+    transform: translate(0, -200px) scale(2) rotate(180deg);
+  }
+  75% {
+    transform: translate(-100px, -100px) scale(1.3) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(360deg);
+  }
+}
+
+@keyframes panda-wiggle {
+  0%,
+  100% {
+    transform: rotate(-20deg) scale(1);
+  }
+  25% {
+    transform: rotate(20deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(-15deg) scale(0.9);
+  }
+  75% {
+    transform: rotate(15deg) scale(1.1);
+  }
+}
+
+@keyframes panda-mega-fly {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  20% {
+    transform: translate(-300px, -300px) rotate(144deg) scale(2);
+  }
+  40% {
+    transform: translate(300px, -200px) rotate(288deg) scale(1.5);
+  }
+  60% {
+    transform: translate(-200px, 300px) rotate(432deg) scale(2.2);
+  }
+  80% {
+    transform: translate(200px, 200px) rotate(576deg) scale(1.8);
+  }
+  100% {
+    transform: translate(0, 0) rotate(720deg) scale(1);
+  }
+}
+
+/* ANIMAZIONI RAZZI */
+@keyframes razzo-left {
+  0% {
+    left: -100px;
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  50% {
+    left: 50%;
+    top: -200px;
+    transform: rotate(180deg);
+  }
+  100% {
+    left: 100%;
+    top: 0;
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes razzo-right {
+  0% {
+    right: -100px;
+    top: 0;
+    transform: rotate(45deg);
+  }
+  50% {
+    right: 50%;
+    top: 200px;
+    transform: rotate(-180deg);
+  }
+  100% {
+    right: 100%;
+    top: 0;
+    transform: rotate(-405deg);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg) scale(1.5);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.3);
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: skew(-2deg);
+  }
+  50% {
+    transform: skew(2deg);
+  }
+}
+
+@keyframes fly-diagonal {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(100px, -100px) rotate(90deg);
+  }
+  50% {
+    transform: translate(200px, 0) rotate(180deg);
+  }
+  75% {
+    transform: translate(100px, 100px) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes explode {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+}
+
+@keyframes image-chaos {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(10deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(-10deg) scale(0.9);
+  }
+  75% {
+    transform: rotate(5deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes tutto-casino {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  20% {
+    transform: translate(50px, -50px) rotate(72deg) scale(1.5);
+  }
+  40% {
+    transform: translate(-50px, -30px) rotate(144deg) scale(1.2);
+  }
+  60% {
+    transform: translate(30px, 50px) rotate(216deg) scale(1.8);
+  }
+  80% {
+    transform: translate(-30px, 30px) rotate(288deg) scale(1.3);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg) scale(1);
+  }
+}
+
+/* VIBRAZIONE UNIVERSALE */
+* {
+  animation: universal-chaos 0.1s infinite alternate;
+}
+
+@keyframes universal-chaos {
+  from {
+    transform: translateX(-2px) translateY(2px);
+  }
+  to {
+    transform: translateX(2px) translateY(-2px);
   }
 }
